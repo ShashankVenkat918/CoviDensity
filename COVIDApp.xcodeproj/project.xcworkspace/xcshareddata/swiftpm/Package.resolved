@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MapboxStatic",
+        "repositoryURL": "https://github.com/mapbox/MapboxStatic.swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "467d22a412083823e7b235502d53b62b2c818dcf",
+          "version": null
+        }
+      },
+      {
+        "package": "Polyline",
+        "repositoryURL": "https://github.com/raphaelmor/Polyline.git",
+        "state": {
+          "branch": null,
+          "revision": "011fbc1b0f27a3398bd0fb7c5e2cf5c62ae82717",
+          "version": "4.2.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
