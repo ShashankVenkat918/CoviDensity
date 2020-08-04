@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import MapboxStatic
 import MapKit
+import MapBox
 
 
 
@@ -18,18 +18,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let camera = SnapshotCamera(
-            lookingAtCenter: CLLocationCoordinate2D(latitude: 45.52, longitude: -122.681944),
-            zoomLevel: 12)
-        let options = SnapshotOptions(
-            styleURL: URL(string: "mapbox://styles/shaw918/ckddp5s7c4beu1ilgo950t7ye")!,
-            camera: camera,
-            size: CGSize(width: 200, height: 200))
-        let snapshot = Snapshot(
-            options: options,
-            accessToken: "pk.eyJ1Ijoic2hhdzkxOCIsImEiOiJja2Rkb3FqMXoxOTFoMnhsMHpnZW9lMGU1In0.QWFbOxzLVW2UWdipU62d6A")
-        //this is to access the map API...
-        imageView.image = snapshot.image
+        let url = URL(string: "mapbox://styles/mapbox/streets-v11")
+        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 59.31, longitude: 18.06), zoomLevel: 9, animated: false)
+        view.addSubview(mapView)
     }
 
 
