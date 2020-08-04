@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		984EB89724D9151200669ACA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; };
-		984EB89924D916A200669ACA /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; };
+		984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; };
+		984EB89B24D91AE300669ACA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; };
+		984EB89E24D91AE400669ACA /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98BC2B5024D7727F00987837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B4F24D7727F00987837 /* AppDelegate.swift */; };
 		98BC2B5224D7727F00987837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B5124D7727F00987837 /* SceneDelegate.swift */; };
 		98BC2B5424D7727F00987837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B5324D7727F00987837 /* ViewController.swift */; };
@@ -28,6 +30,21 @@
 			remoteInfo = COVIDApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		984EB89C24D91AE300669ACA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				984EB89E24D91AE400669ACA /* MapboxMobileEvents.framework in Embed Frameworks */,
+				984EB89B24D91AE300669ACA /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		984EB89624D9151100669ACA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
@@ -50,9 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984EB89924D916A200669ACA /* MapboxMobileEvents.framework in Frameworks */,
+				984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */,
 				98BC2B7324D77B8800987837 /* MapboxStatic in Frameworks */,
-				984EB89724D9151200669ACA /* Mapbox.framework in Frameworks */,
+				984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +136,7 @@
 				98BC2B4824D7727F00987837 /* Sources */,
 				98BC2B4924D7727F00987837 /* Frameworks */,
 				98BC2B4A24D7727F00987837 /* Resources */,
+				984EB89C24D91AE300669ACA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

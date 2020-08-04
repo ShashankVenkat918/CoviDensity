@@ -18,5 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>MGLMapBoxAccessToken</key>
+	<string>pk.eyJ1Ijoic2hhdzkxOCIsImEiOiJja2Rkb3FqMXoxOTFoMnhsMHpnZW9lMGU1In0.QWFbOxzLVW2UWdipU62d6A</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows your location on the map and helps improve the map.</string>
 </dict>
 </plist>
