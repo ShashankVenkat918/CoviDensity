@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         let snapshot = Snapshot(
             options: options,
             accessToken: "pk.eyJ1Ijoic2hhdzkxOCIsImEiOiJja2Rkb3FqMXoxOTFoMnhsMHpnZW9lMGU1In0.QWFbOxzLVW2UWdipU62d6A")
-        //this is to access the map API....
+        //this is to access the map API...
         imageView.image = snapshot.image
     }
 
