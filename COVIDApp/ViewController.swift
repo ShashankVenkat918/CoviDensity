@@ -18,17 +18,17 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         let initialLocation = CLLocation(latitude: 34.0689, longitude: -118.4452)
-        //mapView.centerToLocation(initialLocation)
+        mapView.centerToLocation(initialLocation)
         let uclaCenter = CLLocation(latitude: 34.0689, longitude: -118.4452)
         let region = MKCoordinateRegion(
           center: uclaCenter.coordinate,
-          latitudinalMeters: 50000,
-          longitudinalMeters: 60000)
+          latitudinalMeters: 1000,
+          longitudinalMeters: 1000)
         mapView.setCameraBoundary(
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
         
-        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
 
         // Do any additional setup after loading the view.
