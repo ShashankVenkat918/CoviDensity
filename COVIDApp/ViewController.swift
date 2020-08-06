@@ -10,14 +10,28 @@
 import UIKit
 import MapKit
 import Mapbox
+import CoreLocation
 
 
-class ViewController: UIViewController, MGLMapViewDelegate {
+class ViewController: UIViewController, MGLMapViewDelegate,  CLLocationManagerDelegate{
     //@IBOutlet weak var imageView: UIImageView!
-    @IBOutlet private var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
+
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
+        self.locationManager.requestLocation()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+
+        }
+        
+        
         let initialLocation = CLLocation(latitude: 34.0689, longitude: -118.4452)
+        //comment out next line for cool zoom
         mapView.centerToLocation(initialLocation)
         let uclaCenter = CLLocation(latitude: 34.0689, longitude: -118.4452)
         let region = MKCoordinateRegion(
@@ -27,10 +41,11 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.setCameraBoundary(
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
-        
+        mapView.showsUserLocation = true
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
-
+        
+        
         // Do any additional setup after loading the view.
        /* let url = URL(string: "mapbox://styles/shaw918/ckddp5s7c4beu1ilgo950t7ye")
         let mapView = MGLMapView(frame: view.bounds, styleURL: url)
@@ -66,7 +81,14 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         peakAltitude: 3000, completionHandler: nil)
         }
  */
-        
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+            print("locations = \(locValue.latitude) \(locValue.longitude)")
+        }
+
+         func locationManager(_ manager: CLLocationManager,
+         didFailWithError error: Error) {}
+    
     }
 
 private extension MKMapView {
@@ -80,9 +102,17 @@ private extension MKMapView {
       longitudinalMeters: regionRadius)
     setRegion(coordinateRegion, animated: true)
   }
+    
 }
 
-    
+    /*
+func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+    print("locations = \(locValue.latitude) \(locValue.longitude)")
+}
+
+ func locationManager(_ manager: CLLocationManager,
+ didFailWithError error: Error) {}*/
 
 
 

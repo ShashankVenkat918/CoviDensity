@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  COVIDApp
 //
-//  Created by Shashank Venkat on 8/2/20.
-//  Copyright © 2020 Shashank Venkat. All rights reserved.
+//  Created by Shashank Venkat, Ryan Daly, and Connor Daly on 8/2/20.
+//  Copyright © 2020 Shashank Venkat, Ryan Daly, and Connor Daly. All rights reserved.
 //
 
 import UIKit

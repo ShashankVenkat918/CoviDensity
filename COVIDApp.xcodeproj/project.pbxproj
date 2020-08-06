@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66D557C624DB92810068E439 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D557C524DB92810068E439 /* HomeScreen.swift */; };
 		984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; };
 		984EB89B24D91AE300669ACA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66D557C524DB92810068E439 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		984EB89624D9151100669ACA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		984EB89824D916A200669ACA /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		98BC2B4C24D7727F00987837 /* COVIDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVIDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 				98BC2B4F24D7727F00987837 /* AppDelegate.swift */,
 				98BC2B5124D7727F00987837 /* SceneDelegate.swift */,
 				98BC2B5324D7727F00987837 /* ViewController.swift */,
+				66D557C524DB92810068E439 /* HomeScreen.swift */,
 				984EB89624D9151100669ACA /* Mapbox.framework */,
 				98BC2B5524D7727F00987837 /* Main.storyboard */,
 				984EB89824D916A200669ACA /* MapboxMobileEvents.framework */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98BC2B5424D7727F00987837 /* ViewController.swift in Sources */,
+				66D557C624DB92810068E439 /* HomeScreen.swift in Sources */,
 				98BC2B5024D7727F00987837 /* AppDelegate.swift in Sources */,
 				98BC2B5224D7727F00987837 /* SceneDelegate.swift in Sources */,
 			);
