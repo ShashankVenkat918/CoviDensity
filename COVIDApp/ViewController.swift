@@ -13,27 +13,45 @@ import Mapbox
 import CoreLocation
 
 
-class ViewController: UIViewController, MGLMapViewDelegate,  CLLocationManagerDelegate{
+class ViewController: UIViewController, MGLMapViewDelegate{
     //@IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
 
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
-        self.locationManager.requestLocation()
+        /*self.locationManager.requestLocation()
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
 
+        }*/
+        locationManager.requestWhenInUseAuthorization()
+        var currentLoc: CLLocation!
+        var latitude1 = 34.0689
+        var longitude1 = -118.4452
+        //if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+        //CLLocationManager.authorizationStatus() == .authorizedAlways) {
+        locationManager.requestLocation()
+        currentLoc = locationManager.location
+        
+        if (currentLoc == nil)
+        {print("NI")}
+        else{
+           print(currentLoc.coordinate.latitude)
+            print(currentLoc.coordinate.longitude)
+            latitude1 = currentLoc.coordinate.latitude
+            longitude1 = currentLoc.coordinate.longitude
         }
+        //}
         
         
-        let initialLocation = CLLocation(latitude: 34.0689, longitude: -118.4452)
+        let initialLocation = CLLocation(latitude: latitude1, longitude: longitude1)
         //comment out next line for cool zoom
         mapView.centerToLocation(initialLocation)
-        let uclaCenter = CLLocation(latitude: 34.0689, longitude: -118.4452)
+        let uclaCenter = CLLocation(latitude: latitude1, longitude: longitude1)
         let region = MKCoordinateRegion(
           center: uclaCenter.coordinate,
           latitudinalMeters: 1000,
@@ -41,7 +59,7 @@ class ViewController: UIViewController, MGLMapViewDelegate,  CLLocationManagerDe
         mapView.setCameraBoundary(
           MKMapView.CameraBoundary(coordinateRegion: region),
           animated: true)
-        mapView.showsUserLocation = true
+        mapView.showsUserLocation = false
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
@@ -81,13 +99,24 @@ class ViewController: UIViewController, MGLMapViewDelegate,  CLLocationManagerDe
         peakAltitude: 3000, completionHandler: nil)
         }
  */
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            print("locations = \(locValue.latitude) \(locValue.longitude)")
+        /*func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+             print("error:: \(error.localizedDescription)")
         }
 
-         func locationManager(_ manager: CLLocationManager,
-         didFailWithError error: Error) {}
+        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+            if status == .authorizedWhenInUse {
+                locationManager.requestLocation()
+            }
+        }
+
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+            if locations.first != nil {
+                print("location:: (location)")
+            }
+
+        }*/
+ 
     
     }
 
@@ -104,7 +133,38 @@ private extension MKMapView {
   }
     
 }
+extension ViewController : CLLocationManagerDelegate {
 
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+         print("error:: \(error.localizedDescription)")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        if locations.first != nil {
+            print("location:: (location)")
+        }
+
+    }
+
+}
+/*
+extension ViewController : CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // .requestLocation will only pass one location to the locations array
+        // hence we can access it by taking the first element of the array
+        if let location = locations.first {
+            self.latitudeLabel.text = "\(location.coordinate.latitude)"
+            self.longitudeLabel.text = "\(location.coordinate.longitude)"
+        }
+    }
+}*/
     /*
 func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
@@ -113,6 +173,4 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
 
  func locationManager(_ manager: CLLocationManager,
  didFailWithError error: Error) {}*/
-
-
 

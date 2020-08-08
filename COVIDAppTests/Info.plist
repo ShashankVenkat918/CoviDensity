@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>your location is needed for something</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>your location is needed for something</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -20,7 +24,5 @@
 	<string>1</string>
 	<key>MGLMapBoxAccessToken</key>
 	<string>pk.eyJ1Ijoic2hhdzkxOCIsImEiOiJja2Rkb3FqMXoxOTFoMnhsMHpnZW9lMGU1In0.QWFbOxzLVW2UWdipU62d6A</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Shows your location on the map and helps improve the map.</string>
 </dict>
 </plist>

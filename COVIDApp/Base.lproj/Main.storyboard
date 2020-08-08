@@ -42,6 +42,7 @@
         <!--Home Screen-->
         <scene sceneID="Uqi-nX-ac9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdh-ZR-o7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="home_vc" id="dHg-FG-ZK7" customClass="HomeScreen" customModule="COVIDApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VU9-BY-u0d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -55,7 +56,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="StartMapButton:" destination="dHg-FG-ZK7" eventType="touchUpInside" id="jWg-Sl-g0a"/>
+                                    <action selector="GoToMapButton:" destination="dHg-FG-ZK7" eventType="touchUpInside" id="aEw-H0-PjK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*If you don't share we'll steal your data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeO-1n-mZm">
@@ -70,7 +71,6 @@
                         <viewLayoutGuide key="safeArea" id="af3-Ho-Ot9"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdh-ZR-o7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="770.75892857142856"/>
         </scene>

@@ -19,8 +19,7 @@ class HomeScreen: UIViewController{
         // Do any additional setup after loading the view.
     }
     
-    //button action to switch to map view
-     @IBAction func StartMapButton(_ sender: Any) {
+    @IBAction func GoToMapButton(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(identifier: "map_VC") as! ViewController
         //sets Presentation style to fullScreen
         vc.modalPresentationStyle = .fullScreen
@@ -28,10 +27,11 @@ class HomeScreen: UIViewController{
         present(vc, animated:true)
         //self.present(vc, animated:true, completion:nil)
         //show(vc, sender: self )
-     }
+    }
+    //button action to switch to map view
+
      
-    /*
-    // MARK: - Navigation
+    /*   // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
