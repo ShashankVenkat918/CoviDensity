@@ -18,7 +18,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hHD-cq-98Z">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <connections>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="nhx-v3-rdh"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="rW7-rN-DsF"/>
                                 </connections>
                             </mapView>
                         </subviews>
@@ -32,7 +32,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="hHD-cq-98Z" id="Qo3-vH-029"/>
+                        <outlet property="mapView" destination="hHD-cq-98Z" id="izU-Gv-ooU"/>
+                        <outlet property="mapView2" destination="8bC-Xf-vdC" id="3GW-SJ-SaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,7 +43,6 @@
         <!--Home Screen-->
         <scene sceneID="Uqi-nX-ac9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdh-ZR-o7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="home_vc" id="dHg-FG-ZK7" customClass="HomeScreen" customModule="COVIDApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VU9-BY-u0d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -71,6 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="af3-Ho-Ot9"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdh-ZR-o7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="770.75892857142856"/>
         </scene>

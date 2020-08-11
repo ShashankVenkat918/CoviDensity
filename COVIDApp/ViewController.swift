@@ -6,20 +6,35 @@
 //  Copyright © 2020 Shashank Venkat. All rights reserved.
 //
 
-
+import GoogleMobileAds
 import UIKit
 import MapKit
 import Mapbox
 import CoreLocation
-
+import Mapbox
 
 class ViewController: UIViewController, MGLMapViewDelegate{
     //@IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView2: MGLMapView!
 
+    //AD STUFF
+     var bannerView: GADBannerView!
+    
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Google Ad Banner
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+        
+        
+        //Map Stuff
         locationManager.delegate = self
         /*self.locationManager.requestLocation()
         if CLLocationManager.locationServicesEnabled() {
@@ -37,7 +52,7 @@ class ViewController: UIViewController, MGLMapViewDelegate{
         locationManager.requestLocation()
         currentLoc = locationManager.location
         
-        if (currentLoc == nil)
+        if (currentLoc == nil || true)// change to false to set to users location
         {print("NI")}
         else{
            print(currentLoc.coordinate.latitude)
@@ -62,6 +77,27 @@ class ViewController: UIViewController, MGLMapViewDelegate{
         mapView.showsUserLocation = false
         let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 5000)
         mapView.setCameraZoomRange(zoomRange, animated: true)
+        
+        
+
+        /*func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
+
+            //create polyline, add it to the map, then center on it using showAnnotations
+            var coordinates = [
+                CLLocationCoordinate2DMake(38,-121),
+                CLLocationCoordinate2DMake(38,-122),
+                CLLocationCoordinate2DMake(37,-121),
+                CLLocationCoordinate2DMake(37,-122),
+            ]
+            let polygon = MGLPolygon(coordinates: &coordinates, count: UInt(coordinates.count))
+            mapView2.addAnnotation(polygon)
+            mapView2.showAnnotations([polygon], animated: false)
+            mapView2.setZoomLevel(15, animated: true)
+            print("NJNJNJNJJNNNJ BBHB       BYYY")
+        }
+        mapViewDidFinishLoadingMap(mapView2)*/
+        
+        
         
         
         // Do any additional setup after loading the view.
@@ -116,7 +152,27 @@ class ViewController: UIViewController, MGLMapViewDelegate{
             }
 
         }*/
- 
+ //Setting Up Ad banner
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+     bannerView.translatesAutoresizingMaskIntoConstraints = false
+     view.addSubview(bannerView)
+     view.addConstraints(
+       [NSLayoutConstraint(item: bannerView,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: bottomLayoutGuide,
+                           attribute: .top,
+                           multiplier: 1,
+                           constant: 0),
+        NSLayoutConstraint(item: bannerView,
+                           attribute: .centerX,
+                           relatedBy: .equal,
+                           toItem: view,
+                           attribute: .centerX,
+                           multiplier: 1,
+                           constant: 0)
+       ])
+    }
     
     }
 
@@ -152,6 +208,8 @@ extension ViewController : CLLocationManagerDelegate {
         }
 
     }
+    
+    
 
 }
 /*

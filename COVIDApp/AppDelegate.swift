@@ -5,8 +5,9 @@
 //  Created by Shashank Venkat, Ryan Daly, and Connor Daly on 8/2/20.
 //  Copyright © 2020 Shashank Venkat, Ryan Daly, and Connor Daly. All rights reserved.
 //
-
+import GoogleMobileAds
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         return true
     }
 

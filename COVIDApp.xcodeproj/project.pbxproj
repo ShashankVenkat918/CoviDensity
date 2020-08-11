@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66878FB324E2639600A38953 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FA924E2634E00A38953 /* GoogleAppMeasurement.framework */; };
+		66878FB524E2639700A38953 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FAB24E2638000A38953 /* GoogleMobileAds.framework */; };
+		66878FB724E2639900A38953 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FAC24E2638000A38953 /* GoogleUtilities.xcframework */; };
+		66878FBB24E2639D00A38953 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FB024E2639200A38953 /* PromisesObjC.xcframework */; };
+		66878FBD24E272C000A38953 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FAF24E2639200A38953 /* nanopb.xcframework */; };
 		66D557C624DB92810068E439 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D557C524DB92810068E439 /* HomeScreen.swift */; };
 		984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; };
 		984EB89B24D91AE300669ACA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -48,6 +53,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66878F9624E2551300A38953 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		66878F9724E2551300A38953 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleAppMeasurement.framework"; sourceTree = "<group>"; };
+		66878F9824E2551300A38953 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleUtilities.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleUtilities.xcframework"; sourceTree = "<group>"; };
+		66878F9F24E2552600A38953 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = PromisesObjC.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/PromisesObjC.xcframework"; sourceTree = "<group>"; };
+		66878FA024E2552600A38953 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = nanopb.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/nanopb.xcframework"; sourceTree = "<group>"; };
+		66878FA924E2634E00A38953 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		66878FAB24E2638000A38953 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		66878FAC24E2638000A38953 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		66878FAF24E2639200A38953 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
+		66878FB024E2639200A38953 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
 		66D557C524DB92810068E439 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		984EB89624D9151100669ACA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		984EB89824D916A200669ACA /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
@@ -71,7 +86,12 @@
 			files = (
 				984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */,
 				98BC2B7324D77B8800987837 /* MapboxStatic in Frameworks */,
+				66878FB524E2639700A38953 /* GoogleMobileAds.framework in Frameworks */,
+				66878FB724E2639900A38953 /* GoogleUtilities.xcframework in Frameworks */,
 				984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */,
+				66878FB324E2639600A38953 /* GoogleAppMeasurement.framework in Frameworks */,
+				66878FBB24E2639D00A38953 /* PromisesObjC.xcframework in Frameworks */,
+				66878FBD24E272C000A38953 /* nanopb.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +105,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66878F9524E2551300A38953 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66878FA024E2552600A38953 /* nanopb.xcframework */,
+				66878F9F24E2552600A38953 /* PromisesObjC.xcframework */,
+				66878F9724E2551300A38953 /* GoogleAppMeasurement.framework */,
+				66878F9624E2551300A38953 /* GoogleMobileAds.framework */,
+				66878F9824E2551300A38953 /* GoogleUtilities.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98BC2B4324D7727F00987837 = {
 			isa = PBXGroup;
 			children = (
 				98BC2B4E24D7727F00987837 /* COVIDApp */,
 				98BC2B6524D7728300987837 /* COVIDAppTests */,
 				98BC2B4D24D7727F00987837 /* Products */,
+				66878F9524E2551300A38953 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,8 +145,13 @@
 				66D557C524DB92810068E439 /* HomeScreen.swift */,
 				984EB89624D9151100669ACA /* Mapbox.framework */,
 				98BC2B5524D7727F00987837 /* Main.storyboard */,
+				66878FA924E2634E00A38953 /* GoogleAppMeasurement.framework */,
 				984EB89824D916A200669ACA /* MapboxMobileEvents.framework */,
 				98BC2B5824D7728300987837 /* Assets.xcassets */,
+				66878FAB24E2638000A38953 /* GoogleMobileAds.framework */,
+				66878FAC24E2638000A38953 /* GoogleUtilities.xcframework */,
+				66878FAF24E2639200A38953 /* nanopb.xcframework */,
+				66878FB024E2639200A38953 /* PromisesObjC.xcframework */,
 				98BC2B5A24D7728300987837 /* LaunchScreen.storyboard */,
 				98BC2B5D24D7728300987837 /* Info.plist */,
 			);
@@ -411,6 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Non.COVIDApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -433,6 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Non.COVIDApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
