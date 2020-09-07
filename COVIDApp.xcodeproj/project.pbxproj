@@ -17,6 +17,9 @@
 		984EB89B24D91AE300669ACA /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89624D9151100669ACA /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; };
 		984EB89E24D91AE400669ACA /* MapboxMobileEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 984EB89824D916A200669ACA /* MapboxMobileEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9851000F25030F6E009DA96D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9851000E25030F6E009DA96D /* MapKit.framework */; };
+		985100112503174F009DA96D /* UCLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985100102503174F009DA96D /* UCLA.swift */; };
+		9851001325031B2C009DA96D /* UCLA.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9851001225031B2C009DA96D /* UCLA.plist */; };
 		98BC2B5024D7727F00987837 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B4F24D7727F00987837 /* AppDelegate.swift */; };
 		98BC2B5224D7727F00987837 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B5124D7727F00987837 /* SceneDelegate.swift */; };
 		98BC2B5424D7727F00987837 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B5324D7727F00987837 /* ViewController.swift */; };
@@ -66,6 +69,9 @@
 		66D557C524DB92810068E439 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		984EB89624D9151100669ACA /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		984EB89824D916A200669ACA /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		9851000E25030F6E009DA96D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		985100102503174F009DA96D /* UCLA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCLA.swift; sourceTree = "<group>"; };
+		9851001225031B2C009DA96D /* UCLA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UCLA.plist; sourceTree = "<group>"; };
 		98BC2B4C24D7727F00987837 /* COVIDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVIDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BC2B4F24D7727F00987837 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98BC2B5124D7727F00987837 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 				98BC2B7324D77B8800987837 /* MapboxStatic in Frameworks */,
 				66878FB524E2639700A38953 /* GoogleMobileAds.framework in Frameworks */,
 				66878FB724E2639900A38953 /* GoogleUtilities.xcframework in Frameworks */,
+				9851000F25030F6E009DA96D /* MapKit.framework in Frameworks */,
 				984EB89A24D91AE300669ACA /* Mapbox.framework in Frameworks */,
 				66878FB324E2639600A38953 /* GoogleAppMeasurement.framework in Frameworks */,
 				66878FBB24E2639D00A38953 /* PromisesObjC.xcframework in Frameworks */,
@@ -108,6 +115,7 @@
 		66878F9524E2551300A38953 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9851000E25030F6E009DA96D /* MapKit.framework */,
 				66878FA024E2552600A38953 /* nanopb.xcframework */,
 				66878F9F24E2552600A38953 /* PromisesObjC.xcframework */,
 				66878F9724E2551300A38953 /* GoogleAppMeasurement.framework */,
@@ -141,6 +149,8 @@
 			children = (
 				98BC2B4F24D7727F00987837 /* AppDelegate.swift */,
 				98BC2B5124D7727F00987837 /* SceneDelegate.swift */,
+				985100102503174F009DA96D /* UCLA.swift */,
+				9851001225031B2C009DA96D /* UCLA.plist */,
 				98BC2B5324D7727F00987837 /* ViewController.swift */,
 				66D557C524DB92810068E439 /* HomeScreen.swift */,
 				984EB89624D9151100669ACA /* Mapbox.framework */,
@@ -256,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				98BC2B5C24D7728300987837 /* LaunchScreen.storyboard in Resources */,
+				9851001325031B2C009DA96D /* UCLA.plist in Resources */,
 				98BC2B5924D7728300987837 /* Assets.xcassets in Resources */,
 				98BC2B5724D7727F00987837 /* Main.storyboard in Resources */,
 			);
@@ -277,6 +288,7 @@
 			files = (
 				98BC2B5424D7727F00987837 /* ViewController.swift in Sources */,
 				66D557C624DB92810068E439 /* HomeScreen.swift in Sources */,
+				985100112503174F009DA96D /* UCLA.swift in Sources */,
 				98BC2B5024D7727F00987837 /* AppDelegate.swift in Sources */,
 				98BC2B5224D7727F00987837 /* SceneDelegate.swift in Sources */,
 			);
@@ -439,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QY63S848V;
+				DEVELOPMENT_TEAM = F9J2N3QSD8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/COVIDApp",
@@ -450,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Non.COVIDApp;
+				PRODUCT_BUNDLE_IDENTIFIER = COVIDAppShaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5QY63S848V;
+				DEVELOPMENT_TEAM = F9J2N3QSD8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/COVIDApp",
@@ -473,7 +485,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Non.COVIDApp;
+				PRODUCT_BUNDLE_IDENTIFIER = COVIDAppShaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

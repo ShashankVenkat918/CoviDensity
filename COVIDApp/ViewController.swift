@@ -14,12 +14,14 @@ import CoreLocation
 import Mapbox
 
 class ViewController: UIViewController, MGLMapViewDelegate{
-    //@IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapView2: MGLMapView!
 
+    let places = Place.getPlaces()
+    
+    
     //AD STUFF
-     var bannerView: GADBannerView!
+    var bannerView: GADBannerView!
     
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
@@ -36,19 +38,10 @@ class ViewController: UIViewController, MGLMapViewDelegate{
         
         //Map Stuff
         locationManager.delegate = self
-        /*self.locationManager.requestLocation()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-
-        }*/
         locationManager.requestWhenInUseAuthorization()
         var currentLoc: CLLocation!
         var latitude1 = 34.0689
         var longitude1 = -118.4452
-        //if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-        //CLLocationManager.authorizationStatus() == .authorizedAlways) {
         locationManager.requestLocation()
         currentLoc = locationManager.location
         
@@ -79,81 +72,12 @@ class ViewController: UIViewController, MGLMapViewDelegate{
         mapView.setCameraZoomRange(zoomRange, animated: true)
         
         
-
-        /*func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
-
-            //create polyline, add it to the map, then center on it using showAnnotations
-            var coordinates = [
-                CLLocationCoordinate2DMake(38,-121),
-                CLLocationCoordinate2DMake(38,-122),
-                CLLocationCoordinate2DMake(37,-121),
-                CLLocationCoordinate2DMake(37,-122),
-            ]
-            let polygon = MGLPolygon(coordinates: &coordinates, count: UInt(coordinates.count))
-            mapView2.addAnnotation(polygon)
-            mapView2.showAnnotations([polygon], animated: false)
-            mapView2.setZoomLevel(15, animated: true)
-            print("NJNJNJNJJNNNJ BBHB       BYYY")
-        }
-        mapViewDidFinishLoadingMap(mapView2)*/
         
-        
-        
-        
-        // Do any additional setup after loading the view.
-       /* let url = URL(string: "mapbox://styles/shaw918/ckddp5s7c4beu1ilgo950t7ye")
-        let mapView = MGLMapView(frame: view.bounds, styleURL: url)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(CLLocationCoordinate2D(latitude: -25, longitude: 133), zoomLevel: 9, animated: false)
-        view.addSubview(mapView)*/
-        
-        
-       /*let mapView = MGLMapView(frame: view.bounds)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        mapView.setCenter(CLLocationCoordinate2D(latitude: -25, longitude: 133), zoomLevel: 3, animated: true)
-        view.addSubview(mapView)
-        mapView.styleURL = MGLStyle.satelliteStyleURL*/
-      /*  let annotation = MGLPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 40.77014, longitude: -73.97480)
-        annotation.title = "Central Park"
-        annotation.subtitle = "The biggest park in New York City!"
-        mapView.addAnnotation(annotation)
-         */
-        // Set the map view's delegate
-        //mapView.delegate = self
-            //mapView.showsUserLocation = true
-            }
-/*
-        func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-        // Always allow callouts to popup when annotations are tapped.
-        return true
-        }
-         
-        func mapView(_ mapView: MGLMapView, didSelect annotation: MGLAnnotation) {
-        let camera = MGLMapCamera(lookingAtCenter: annotation.coordinate, fromDistance: 4500, pitch: 15, heading: 180)
-        mapView.fly(to: camera, withDuration: 4,
-        peakAltitude: 3000, completionHandler: nil)
-        }
- */
-        /*func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-             print("error:: \(error.localizedDescription)")
-        }
-
-        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-            if status == .authorizedWhenInUse {
-                locationManager.requestLocation()
-            }
-        }
-
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-            if locations.first != nil {
-                print("location:: (location)")
-            }
-
-        }*/
+    }
  //Setting Up Ad banner
     func addBannerViewToView(_ bannerView: GADBannerView) {
+        mapView!.delegate = self
+        mapView!.addAnnotations(places)
      bannerView.translatesAutoresizingMaskIntoConstraints = false
      view.addSubview(bannerView)
      view.addConstraints(
@@ -174,7 +98,14 @@ class ViewController: UIViewController, MGLMapViewDelegate{
        ])
     }
     
+    func addAnnotations() {
+        mapView?.delegate = self
+        mapView?.addAnnotations(places)
     }
+    
+    
+    
+}
 
 private extension MKMapView {
   func centerToLocation(
@@ -212,23 +143,20 @@ extension ViewController : CLLocationManagerDelegate {
     
 
 }
-/*
-extension ViewController : CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // .requestLocation will only pass one location to the locations array
-        // hence we can access it by taking the first element of the array
-        if let location = locations.first {
-            self.latitudeLabel.text = "\(location.coordinate.latitude)"
-            self.longitudeLabel.text = "\(location.coordinate.longitude)"
+ 
+
+
+extension ViewController: MKMapViewDelegate {
+    @nonobjc func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        else {
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "annotationView") ?? MKAnnotationView()
+            annotationView.image = UIImage(named: "place icon")
+            return annotationView
         }
     }
-}*/
-    /*
-func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-    guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-    print("locations = \(locValue.latitude) \(locValue.longitude)")
 }
-
- func locationManager(_ manager: CLLocationManager,
- didFailWithError error: Error) {}*/
 
