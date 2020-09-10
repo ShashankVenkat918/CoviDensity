@@ -5,22 +5,12 @@
 //  Created by Shashank Venkat on 09/04/2020.
 //
 //
-
+/*
 import MapKit
 
-@objc class Place: NSObject {
-    var title: String?
-    var subtitle: String?
-    var coordinate: CLLocationCoordinate2D
-    
-    init(title: String?, subtitle: String?, coordinate: CLLocationCoordinate2D) {
-        self.title = title
-        self.subtitle = subtitle
-        self.coordinate = coordinate
-    }
-    
-    static func getPlaces() -> [Place] {
-        guard let path = Bundle.main.path(forResource: "UCLA", ofType: "plist"), let array = NSArray(contentsOfFile: path) else { return [] }
+@objc class BombShelter: NSObject {    
+    static func getBombShelter() -> [Place] {
+        guard let path = Bundle.main.path(forResource: "BombShelter", ofType: "plist"), let array = NSArray(contentsOfFile: path) else { return [] }
         
         var places = [Place]()
         
@@ -36,6 +26,6 @@ import MapKit
         
         return places as [Place]
     }
-}
+}*/
 
-extension Place: MKAnnotation { }
+

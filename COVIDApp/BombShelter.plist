@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Upper LHC</string>
+		<key>description</key>
+		<string>Upper LHC</string>
+		<key>latitude</key>
+		<real>34.068572</real>
+		<key>longitude</key>
+		<real>-118.442466</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Upper RHC</string>
+		<key>description</key>
+		<string>Upper RHC</string>
+		<key>latitude</key>
+		<real>34.06857</real>
+		<key>longitude</key>
+		<real>-118.442011</real>
+	</dict>
+	<dict>
+		<key>title </key>
+		<string>Lower LHC</string>
+		<key>description</key>
+		<string>Lower LHC</string>
+		<key>latitude</key>
+		<real>34.067631</real>
+		<key>longitude</key>
+		<real>-118.442009</real>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Lower RHC</string>
+		<key>description</key>
+		<string>Lower RHC</string>
+		<key>latitude</key>
+		<real>34.067621</real>
+		<key>longitude</key>
+		<real>-118.442455</real>
+	</dict>
+</array>
+</plist>

@@ -16,8 +16,10 @@ import Mapbox
 class ViewController: UIViewController, MGLMapViewDelegate{
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapView2: MGLMapView!
-
-    let places = Place.getPlaces()
+    
+    
+    let bombShelterCoord = Place.getBombShelter()
+    
     
     
     //AD STUFF
@@ -27,12 +29,22 @@ class ViewController: UIViewController, MGLMapViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        addAnnotations(places: bombShelterCoord)
+        addPolyline(places: bombShelterCoord)
+        addPolygon(places: bombShelterCoord)
+        
+        
+        
+        
         //Google Ad Banner
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
         addBannerViewToView(bannerView)
         bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
+        
         
         
         
@@ -76,8 +88,7 @@ class ViewController: UIViewController, MGLMapViewDelegate{
     }
  //Setting Up Ad banner
     func addBannerViewToView(_ bannerView: GADBannerView) {
-        mapView!.delegate = self
-        mapView!.addAnnotations(places)
+        
      bannerView.translatesAutoresizingMaskIntoConstraints = false
      view.addSubview(bannerView)
      view.addConstraints(
@@ -98,13 +109,23 @@ class ViewController: UIViewController, MGLMapViewDelegate{
        ])
     }
     
-    func addAnnotations() {
+    func addAnnotations(places: [Place]) {
         mapView?.delegate = self
         mapView?.addAnnotations(places)
+        
     }
     
+    func addPolyline(places: [Place]) {
+        var locations = places.map { $0.coordinate }
+        let polyline = MKPolyline(coordinates: &locations, count: locations.count)
+        mapView?.addOverlay(polyline)
+    }
     
-    
+    func addPolygon(places: [Place]) {
+        var locations = places.map { $0.coordinate }
+        let polygon = MKPolygon(coordinates: &locations, count: locations.count)
+        mapView?.addOverlay(polygon)
+    }
 }
 
 private extension MKMapView {
@@ -157,6 +178,31 @@ extension ViewController: MKMapViewDelegate {
             annotationView.image = UIImage(named: "place icon")
             return annotationView
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKCircle {
+            let renderer = MKCircleRenderer(overlay: overlay)
+            renderer.fillColor = UIColor.black.withAlphaComponent(0.5)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 2
+            return renderer
+        
+        } else if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.orange
+            renderer.lineWidth = 3
+            return renderer
+        }
+         else if overlay is MKPolygon {
+            let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            renderer.fillColor = UIColor.black.withAlphaComponent(0.5)
+            renderer.strokeColor = UIColor.orange
+            renderer.lineWidth = 2
+            return renderer
+        }
+        
+        return MKOverlayRenderer()
     }
 }
 

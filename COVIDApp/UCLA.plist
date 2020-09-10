@@ -4,13 +4,23 @@
 <array>
 	<dict>
 		<key>title</key>
+		<string>Bomb Shelter</string>
+		<key>description</key>
+		<string>Welcome to the Bomb Shelter!</string>
+		<key>latitude</key>
+		<real>34.068141</real>
+		<key>longitude</key>
+		<real>-118.442261</real>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>UCLA</string>
 		<key>description</key>
 		<string>Welcome to UCLA!</string>
 		<key>latitude</key>
 		<real>34.0689</real>
 		<key>longitude</key>
-		<real>118.4452</real>
+		<real>-118.4452</real>
 	</dict>
 </array>
 </plist>
