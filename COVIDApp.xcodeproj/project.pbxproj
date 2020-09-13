@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F0A2E756AF747539BA6A625 /* libPods-COVIDApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F7F3EC8221A25596570DEF1 /* libPods-COVIDApp.a */; };
 		66878FB324E2639600A38953 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FA924E2634E00A38953 /* GoogleAppMeasurement.framework */; };
 		66878FB524E2639700A38953 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FAB24E2638000A38953 /* GoogleMobileAds.framework */; };
 		66878FB724E2639900A38953 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66878FAC24E2638000A38953 /* GoogleUtilities.xcframework */; };
@@ -29,7 +30,8 @@
 		98BC2B5724D7727F00987837 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98BC2B5524D7727F00987837 /* Main.storyboard */; };
 		98BC2B5924D7728300987837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98BC2B5824D7728300987837 /* Assets.xcassets */; };
 		98BC2B6724D7728300987837 /* COVIDAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BC2B6624D7728300987837 /* COVIDAppTests.swift */; };
-		98BC2B7324D77B8800987837 /* MapboxStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 98BC2B7224D77B8800987837 /* MapboxStatic */; };
+		98BC2B7324D77B8800987837 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 98BC2B7224D77B8800987837 /* SwiftPackageProductDependency */; };
+		FD8DA921743C7D272164EEAC /* libPods-COVIDAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6AB6DD7A8B85B2927E25B4F /* libPods-COVIDAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F9CBFA0A8E15D70FAD44BCC /* Pods-COVIDApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVIDApp.debug.xcconfig"; path = "Target Support Files/Pods-COVIDApp/Pods-COVIDApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5CB2ACC778B66A28932F9CFA /* Pods-COVIDAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVIDAppTests.release.xcconfig"; path = "Target Support Files/Pods-COVIDAppTests/Pods-COVIDAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F7F3EC8221A25596570DEF1 /* libPods-COVIDApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COVIDApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66878F9624E2551300A38953 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		66878F9724E2551300A38953 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleAppMeasurement.framework"; sourceTree = "<group>"; };
 		66878F9824E2551300A38953 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = GoogleUtilities.xcframework; path = "../../../Downloads/GoogleMobileAdsSdkiOS-7.63.0/GoogleUtilities.xcframework"; sourceTree = "<group>"; };
@@ -87,6 +92,9 @@
 		98BC2B6224D7728300987837 /* COVIDAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COVIDAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BC2B6624D7728300987837 /* COVIDAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COVIDAppTests.swift; sourceTree = "<group>"; };
 		98BC2B6824D7728300987837 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6AB6DD7A8B85B2927E25B4F /* libPods-COVIDAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-COVIDAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E22D27287FAA24F00969E392 /* Pods-COVIDAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVIDAppTests.debug.xcconfig"; path = "Target Support Files/Pods-COVIDAppTests/Pods-COVIDAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5C3E5A723D968C5D09D611C /* Pods-COVIDApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-COVIDApp.release.xcconfig"; path = "Target Support Files/Pods-COVIDApp/Pods-COVIDApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				984EB89D24D91AE400669ACA /* MapboxMobileEvents.framework in Frameworks */,
-				98BC2B7324D77B8800987837 /* MapboxStatic in Frameworks */,
+				98BC2B7324D77B8800987837 /* BuildFile in Frameworks */,
 				66878FB524E2639700A38953 /* GoogleMobileAds.framework in Frameworks */,
 				66878FB724E2639900A38953 /* GoogleUtilities.xcframework in Frameworks */,
 				9851000F25030F6E009DA96D /* MapKit.framework in Frameworks */,
@@ -103,6 +111,7 @@
 				66878FB324E2639600A38953 /* GoogleAppMeasurement.framework in Frameworks */,
 				66878FBB24E2639D00A38953 /* PromisesObjC.xcframework in Frameworks */,
 				66878FBD24E272C000A38953 /* nanopb.xcframework in Frameworks */,
+				5F0A2E756AF747539BA6A625 /* libPods-COVIDApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD8DA921743C7D272164EEAC /* libPods-COVIDAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +135,8 @@
 				66878F9724E2551300A38953 /* GoogleAppMeasurement.framework */,
 				66878F9624E2551300A38953 /* GoogleMobileAds.framework */,
 				66878F9824E2551300A38953 /* GoogleUtilities.xcframework */,
+				5F7F3EC8221A25596570DEF1 /* libPods-COVIDApp.a */,
+				B6AB6DD7A8B85B2927E25B4F /* libPods-COVIDAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +148,7 @@
 				98BC2B6524D7728300987837 /* COVIDAppTests */,
 				98BC2B4D24D7727F00987837 /* Products */,
 				66878F9524E2551300A38953 /* Frameworks */,
+				B8C1BE51C03EDAF772CCB854 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +196,17 @@
 			path = COVIDAppTests;
 			sourceTree = "<group>";
 		};
+		B8C1BE51C03EDAF772CCB854 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F9CBFA0A8E15D70FAD44BCC /* Pods-COVIDApp.debug.xcconfig */,
+				E5C3E5A723D968C5D09D611C /* Pods-COVIDApp.release.xcconfig */,
+				E22D27287FAA24F00969E392 /* Pods-COVIDAppTests.debug.xcconfig */,
+				5CB2ACC778B66A28932F9CFA /* Pods-COVIDAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98BC2B6B24D7728300987837 /* Build configuration list for PBXNativeTarget "COVIDApp" */;
 			buildPhases = (
+				F59C26F0EE6959BE51EB47B6 /* [CP] Check Pods Manifest.lock */,
 				98BC2B4824D7727F00987837 /* Sources */,
 				98BC2B4924D7727F00987837 /* Frameworks */,
 				98BC2B4A24D7727F00987837 /* Resources */,
@@ -201,7 +226,7 @@
 			);
 			name = COVIDApp;
 			packageProductDependencies = (
-				98BC2B7224D77B8800987837 /* MapboxStatic */,
+				98BC2B7224D77B8800987837 /* SwiftPackageProductDependency */,
 			);
 			productName = COVIDApp;
 			productReference = 98BC2B4C24D7727F00987837 /* COVIDApp.app */;
@@ -211,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98BC2B6E24D7728300987837 /* Build configuration list for PBXNativeTarget "COVIDAppTests" */;
 			buildPhases = (
+				40273385C4F52F50DE0B63E3 /* [CP] Check Pods Manifest.lock */,
 				98BC2B5E24D7728300987837 /* Sources */,
 				98BC2B5F24D7728300987837 /* Frameworks */,
 				98BC2B6024D7728300987837 /* Resources */,
@@ -254,7 +280,7 @@
 			);
 			mainGroup = 98BC2B4324D7727F00987837;
 			packageReferences = (
-				98BC2B7124D77B8800987837 /* XCRemoteSwiftPackageReference "MapboxStatic.swift" */,
+				98BC2B7124D77B8800987837 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 98BC2B4D24D7727F00987837 /* Products */;
 			projectDirPath = "";
@@ -287,6 +313,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		40273385C4F52F50DE0B63E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COVIDAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F59C26F0EE6959BE51EB47B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-COVIDApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98BC2B4824D7727F00987837 /* Sources */ = {
@@ -448,6 +521,7 @@
 		};
 		98BC2B6C24D7728300987837 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F9CBFA0A8E15D70FAD44BCC /* Pods-COVIDApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,7 +535,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = COVIDAppShaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -471,6 +548,7 @@
 		};
 		98BC2B6D24D7728300987837 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5C3E5A723D968C5D09D611C /* Pods-COVIDApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -484,7 +562,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = COVIDAppShaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -494,6 +575,7 @@
 		};
 		98BC2B6F24D7728300987837 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22D27287FAA24F00969E392 /* Pods-COVIDAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +597,7 @@
 		};
 		98BC2B7024D7728300987837 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB2ACC778B66A28932F9CFA /* Pods-COVIDAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,7 +650,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		98BC2B7124D77B8800987837 /* XCRemoteSwiftPackageReference "MapboxStatic.swift" */ = {
+		98BC2B7124D77B8800987837 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/MapboxStatic.swift.git";
 			requirement = {
@@ -578,9 +661,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		98BC2B7224D77B8800987837 /* MapboxStatic */ = {
+		98BC2B7224D77B8800987837 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 98BC2B7124D77B8800987837 /* XCRemoteSwiftPackageReference "MapboxStatic.swift" */;
+			package = 98BC2B7124D77B8800987837 /* RemoteSwiftPackageReference */;
 			productName = MapboxStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
